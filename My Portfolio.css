@@ -14,6 +14,7 @@
 /* Reset & Base */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -1140,5 +1141,258 @@ nav a.active::after {
     .header-row {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+/* Small-screen layout fixes */
+@media (max-width: 900px) {
+    header {
+        padding: 18px 24px;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero,
+    .about-section,
+    .services-section,
+    .skills-section,
+    .contact-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .testimonials-grid,
+    .skills-container,
+    .contact-container {
+        width: 100%;
+    }
+
+    .projects-grid,
+    .testimonials-grid {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero-image-container {
+        width: 100%;
+    }
+
+    .hero-person {
+        max-width: 450px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-container {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-cta {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    nav ul {
+        gap: 8px 14px;
+    }
+
+    nav a {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero,
+    .about-section,
+    .services-section,
+    .skills-section,
+    .projects-section,
+    .testimonials-section,
+    .contact-section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero {
+        min-height: auto;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(38px, 12vw, 50px);
+        overflow-wrap: anywhere;
+    }
+
+    .hero-content h2,
+    .about-left h2,
+    .contact-left h2 {
+        font-size: clamp(26px, 8vw, 36px);
+    }
+
+    .hero-content p,
+    .about-left p {
+        font-size: 14px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn {
+        justify-content: center;
+        padding: 13px 20px;
+    }
+
+    .hero-person {
+        width: min(100%, 360px);
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .hero-glow-bg {
+        width: min(100%, 390px);
+        height: min(100%, 390px);
+    }
+
+    .tech-badge {
+        padding: 8px 10px;
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .tech-badge i {
+        font-size: 15px;
+    }
+
+    .badge-react { right: 0; }
+    .badge-node { left: 0; }
+    .badge-ts { left: 2%; }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-box {
+        padding: 14px 10px;
+    }
+
+    .stat-box h3 {
+        font-size: 24px;
+    }
+
+    .stat-box span {
+        font-size: 11px;
+    }
+
+    .info-card,
+    .contact-info-card,
+    .service-card,
+    .testimonial-card {
+        padding: 24px 18px;
+    }
+
+    .info-row {
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .info-row .label {
+        width: 72px;
+        flex: 0 0 72px;
+    }
+
+    .info-row .value,
+    .info-row .label {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .signature {
+        font-size: 44px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .tech-item {
+        padding: 14px 6px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .header-row {
+        align-items: stretch;
+    }
+
+    .btn-view-all {
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .project-title-row {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .project-title-row h3 {
+        overflow-wrap: anywhere;
+    }
+
+    .client-info {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .stars {
+        width: 100%;
+        margin-left: 65px;
+    }
+
+    .footer-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .footer-top {
+        gap: 32px;
     }
 }

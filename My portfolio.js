@@ -42,4 +42,9 @@ if (typeof AOS !== 'undefined') {
     offset: 100,
     anchorPlacement: 'top-bottom'
   });
+} else {
+  document.querySelectorAll('[data-aos]').forEach((element) => {
+    element.removeAttribute('data-aos');
+    element.removeAttribute('data-aos-delay');
+  });
 }
