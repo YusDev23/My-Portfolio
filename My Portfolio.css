@@ -1245,8 +1245,8 @@ nav a.active::after {
     }
 
     .hero-content h1 {
-        font-size: clamp(38px, 12vw, 50px);
-        overflow-wrap: anywhere;
+        font-size: clamp(28px, 9vw, 50px);
+        white-space: nowrap;
     }
 
     .hero-content h2,
